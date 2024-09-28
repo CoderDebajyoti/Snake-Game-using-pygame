@@ -56,6 +56,3 @@ Feel free to fork this project and submit pull requests with new features, bug f
 ---
 
 Developed by **Debajyoti Das** with Python and Pygame.
-```
-
-You can copy this `README.md` into your repository to provide a clear and structured overview of your project. Let me know if you want to customize it further!
