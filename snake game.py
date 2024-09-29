@@ -15,7 +15,7 @@ blue = (50, 153, 213)
 
 # Display settings
 width = 600
-height = 600
+height = 400
 dis = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Snake Game by Debajyoti')
 
@@ -23,7 +23,7 @@ pygame.display.set_caption('Snake Game by Debajyoti')
 clock = pygame.time.Clock()
 
 snake_block = 10
-snake_speed = 12
+snake_speed = 15
 
 # Font style
 font_style = pygame.font.SysFont("bahnschrift", 25)
@@ -55,7 +55,7 @@ def gameLoop():
 
     # Snake body
     snake_list = []
-    length_of_snake = 3
+    length_of_snake = 1
 
     # Food position
     foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
@@ -66,7 +66,7 @@ def gameLoop():
         while game_close == True:
             dis.fill(blue)
             message("You Lost! Press Q-Quit or C-Play Again", red)
-            score_display(length_of_snake - 3)
+            score_display(length_of_snake - 1)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -117,7 +117,7 @@ def gameLoop():
                 game_close = True
 
         snake(snake_block, snake_list)
-        score_display(length_of_snake - 3)
+        score_display(length_of_snake - 1)
 
         pygame.display.update()
 
